@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestApp20</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
+    <div class="ui fixed brown inverted menu">
+      <div class="ui container">
+        <a href="#" class="header item">Test App 2.0</a>
+        <% if logged_in? %><%= render partial: "navigation" %><% end %>
+
+      </div>
+    </div>
+    <div class="ui main container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

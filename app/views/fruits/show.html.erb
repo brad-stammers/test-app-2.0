@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fruit.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @fruit.desc %>
+</p>
+
+<%= link_to 'Edit', edit_fruit_path(@fruit) %> |
+<%= link_to 'Back', fruits_path %>
